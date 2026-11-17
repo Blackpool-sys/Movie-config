@@ -45,7 +45,7 @@
     },
     {
       "name": "321Movies UK",
-      "url": "https://321movies.co.uk/search-movies/{title}.html",
+      "url": "https://321movies.xyz/search-movies/{title}.html",
       "label": "HD [Web]",
       "type": "embed"
     }
