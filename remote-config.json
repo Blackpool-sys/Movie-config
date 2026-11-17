@@ -21,7 +21,7 @@
   "movie_servers": [
     {
       "name": "VidSrc Pro",
-      "url": "https://vidsrc.xyz/embed/movie/{imdb}",
+      "url": "https://vidsrc.mov/embed/movie/{imdb}",
       "label": "1080p [Auto]",
       "type": "embed"
     },
