@@ -20,10 +20,40 @@
   },
   "movie_servers": [
     {
-      "name": "VidSrc me",
-      "url": "https://vidsrc.mov/embed/movie/{imdb}",
+      "name": "VixSrc Direct",
+      "url": "https://vixsrc.to",
+      "label": "1080p [Direct]",
+      "type": "vixsrc"
+    },
+    {
+      "name": "AutoEmbed API",
+      "url": "https://tom.autoembed.cc",
+      "label": "1080p [Fast API]",
+      "type": "autoembed_api"
+    },
+    {
+      "name": "FlixHQ Direct",
+      "url": "https://api.consumet.org",
+      "label": "1080p [Consumet]",
+      "type": "flixhq"
+    },
+    {
+      "name": "SuperEmbed Direct",
+      "url": "https://multiembed.mov/directstream.php?video_id={tmdb}&tmdb=1",
+      "label": "1080p [Multi]",
+      "type": "multiembed"
+    },
+    {
+      "name": "AutoEmbed Player",
+      "url": "https://autoembed.cc/embed/player.php?id={imdb}",
       "label": "1080p [Auto]",
-      "type": "embed"
+      "type": "autoembed"
+    },
+    {
+      "name": "VidSrc Pro",
+      "url": "https://vidsrc.xyz/embed/movie/{tmdb}",
+      "label": "1080p [VidSrc]",
+      "type": "vidsrc"
     },
     {
       "name": "VidSrc Me",
@@ -32,15 +62,9 @@
       "type": "embed"
     },
     {
-      "name": "SuperEmbed",
-      "url": "https://multiembed.mov/?video_id={imdb}",
-      "label": "1080p [Multi]",
-      "type": "embed"
-    },
-    {
-      "name": "AutoEmbed",
-      "url": "https://autoembed.co/movie/imdb/{imdb}",
-      "label": "1080p [Direct]",
+      "name": "VidSrc Mov",
+      "url": "https://vidsrc.mov/embed/movie/{imdb}",
+      "label": "1080p [Backup]",
       "type": "embed"
     },
     {
@@ -52,27 +76,45 @@
   ],
   "tv_servers": [
     {
-      "name": "VidSrc Pro",
-      "url": "https://vidsrc.xyz/embed/tv/{imdb}/{season}-{episode}",
+      "name": "VixSrc Direct",
+      "url": "https://vixsrc.to",
+      "label": "1080p [Direct]",
+      "type": "vixsrc"
+    },
+    {
+      "name": "AutoEmbed API",
+      "url": "https://tom.autoembed.cc",
+      "label": "1080p [Fast API]",
+      "type": "autoembed_api"
+    },
+    {
+      "name": "FlixHQ Direct",
+      "url": "https://api.consumet.org",
+      "label": "1080p [Consumet]",
+      "type": "flixhq"
+    },
+    {
+      "name": "SuperEmbed Direct",
+      "url": "https://multiembed.mov/directstream.php?video_id={tmdb}&tmdb=1&s={season}&e={episode}",
+      "label": "1080p [Multi]",
+      "type": "multiembed"
+    },
+    {
+      "name": "AutoEmbed Player",
+      "url": "https://autoembed.cc/embed/player.php?id={imdb}&s={season}&e={episode}",
       "label": "1080p [Auto]",
-      "type": "embed"
+      "type": "autoembed"
+    },
+    {
+      "name": "VidSrc Pro",
+      "url": "https://vidsrc.xyz/embed/tv/{tmdb}/{season}-{episode}",
+      "label": "1080p [VidSrc]",
+      "type": "vidsrc"
     },
     {
       "name": "VidSrc Me",
       "url": "https://vidsrc.me/embed/tv?imdb={imdb}&season={season}&episode={episode}",
       "label": "1080p [Fast]",
-      "type": "embed"
-    },
-    {
-      "name": "SuperEmbed",
-      "url": "https://multiembed.mov/?video_id={imdb}&s={season}&e={episode}",
-      "label": "1080p [Multi]",
-      "type": "embed"
-    },
-    {
-      "name": "AutoEmbed",
-      "url": "https://autoembed.co/tv/imdb/{imdb}-{season}-{episode}",
-      "label": "1080p [Direct]",
       "type": "embed"
     }
   ]
