@@ -1,23 +1,4 @@
-{
-  "app_Config": {
-    "version": "2.0.0",
-    "maintenance_mode": false,
-    "announcement": "مرحباً بكم في النسخة المحدثة"
-  },
-  "ads_config": {
-    "enable_ads": true,
-    "ad_network": "custom_or_admob",
-    "admob": {
-      "banner_id": "ca-app-pub-3940256099942544/6300978111",
-      "interstitial_id": "ca-app-pub-3940256099942544/1033173712"
-    },
-    "custom_ads": {
-      "top_banner_image": "https://via.placeholder.com/728x90/131722/00e5ff?text=Your+Ad+Here",
-      "top_banner_click_url": "https://your-website-or-offer.com",
-      "pre_roll_interstitial_url": "https://your-website-or-offer.com",
-      "show_ad_before_play": true
-    }
-  },
+
   "movie_servers": [
     {
       "name": "VixSrc Direct",
