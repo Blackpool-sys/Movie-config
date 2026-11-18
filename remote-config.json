@@ -1,23 +1,5 @@
-
+{
   "movie_servers": [
-    {
-      "name": "VixSrc Direct",
-      "url": "https://vixsrc.to",
-      "label": "1080p [Direct]",
-      "type": "vixsrc"
-    },
-    {
-      "name": "AutoEmbed API",
-      "url": "https://tom.autoembed.cc",
-      "label": "1080p [Fast API]",
-      "type": "autoembed_api"
-    },
-    {
-      "name": "FlixHQ Direct",
-      "url": "https://api.consumet.org",
-      "label": "1080p [Consumet]",
-      "type": "flixhq"
-    },
     {
       "name": "SuperEmbed Direct",
       "url": "https://multiembed.mov/directstream.php?video_id={tmdb}&tmdb=1",
@@ -56,24 +38,6 @@
     }
   ],
   "tv_servers": [
-    {
-      "name": "VixSrc Direct",
-      "url": "https://vixsrc.to",
-      "label": "1080p [Direct]",
-      "type": "vixsrc"
-    },
-    {
-      "name": "AutoEmbed API",
-      "url": "https://tom.autoembed.cc",
-      "label": "1080p [Fast API]",
-      "type": "autoembed_api"
-    },
-    {
-      "name": "FlixHQ Direct",
-      "url": "https://api.consumet.org",
-      "label": "1080p [Consumet]",
-      "type": "flixhq"
-    },
     {
       "name": "SuperEmbed Direct",
       "url": "https://multiembed.mov/directstream.php?video_id={tmdb}&tmdb=1&s={season}&e={episode}",
