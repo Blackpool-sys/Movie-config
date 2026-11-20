@@ -1,24 +1,51 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-11-20T00:00:00Z",
+  "settings": {
+    "timeout_seconds": 12,
+    "max_concurrent_checks": 3,
+    "fallback_user_agent": "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+  },
+  "providers": [
     {
-      "name": "VidSrc Me",
-      "url": "https://vidsrc.me/embed/movie?imdb={imdb}",
-      "label": "1080p [Fast]",
-      "type": "embed"
+      "id": "vixsrc_direct",
+      "name": "VixSrc Direct",
+      "categories": ["Hollywood", "TV Shows"],
+      "enabled": true,
+      "priority": 1,
+      "type": "direct_hls",
+      "movie_url": "https://vixsrc.to/movie/{tmdb_id}",
+      "tv_url": "https://vixsrc.to/tv/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://vixsrc.to/",
+        "Origin": "https://vixsrc.to"
+      }
     },
     {
-      "name": "VidSrc Mov",
-      "url": "https://vidsrc.mov/embed/movie/{imdb}",
-      "label": "1080p [Backup]",
-      "type": "embed"
+      "id": "consumet_api",
+      "name": "Abyssinia",
+      "categories": ["Hollywood", "Anime"],
+      "enabled": true,
+      "priority": 2,
+      "type": "json_api",
+      "movie_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}",
+      "tv_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}?season={season}&episode={episode}",
+      "headers": {
+        "Accept": "application/json"
+      }
     },
-
-  ],
-  "tv_servers": [
-
     {
-      "name": "VidSrc Me",
-      "url": "https://vidsrc.me/embed/tv?imdb={imdb}&season={season}&episode={episode}",
-      "label": "1080p [Fast]",
-      "type": "embed"
+      "id": "multiembed_mirror",
+      "name": "Zeila",
+      "categories": ["Hollywood", "TV Shows"],
+      "enabled": true,
+      "priority": 3,
+      "type": "embed_extract",
+      "movie_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1",
+      "tv_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1&s={season}&e={episode}",
+      "headers": {
+        "Referer": "https://multiembed.mov/"
+      }
     }
   ]
 }
