@@ -1,6 +1,6 @@
 {
-  "version": "4.4.1",
-  "updated_at": "2026-11-22T21:00:00Z",
+  "version": "4.5.0",
+  "updated_at": "2026-11-23T10:00:00Z",
   "settings": {
     "timeout_seconds": 8,
     "max_concurrent_checks": 3,
@@ -18,44 +18,30 @@
   "pre_roll_ad": {
     "enabled": true,
     "countdown_seconds": 10,
-    "badge": {
-      "ar": "إعلان دعائي",
-      "en": "Sponsored Ad"
-    },
-    "title": {
-      "ar": "عضوية VIP - KnoxForTV",
-      "en": "KnoxForTV - VIP Club"
-    },
+    "badge": { "ar": "إعلان دعائي", "en": "Sponsored Ad" },
+    "title": { "ar": "عضوية VIP - KnoxForTV", "en": "KnoxForTV - VIP Club" },
     "description": {
       "ar": "استمتع بمشاهدة مكتبة ضخمة تضم آلاف الأفلام والمسلسلات الحصرية بأعلى دقة 4K ودون إعلانات.",
       "en": "Experience ultra buffer-free 4K streaming with zero interruptions and exclusive titles."
     },
     "action_url": "https://t.me/KNOXFORTV",
-    "action_text": {
-      "ar": "انضم الآن إلى القناة",
-      "en": "Join Channel Now"
-    },
+    "action_text": { "ar": "انضم الآن إلى القناة", "en": "Join Channel Now" },
     "image_url": "",
     "icon": "crown"
   },
   "providers": [
     {
-      "id": "vixsrc_mirror",
-      "name": "VixSrc High-Speed",
+      "id": "vidsrc_sh",
+      "name": "VidSrc Main",
       "categories": ["Hollywood", "TV Shows", "Trending"],
       "enabled": true,
       "priority": 1,
-      "badge": "1080p/720p",
-      "type": "vixsrc_extract",
-      "movie_url": "https://vixsrc.to/movie/{tmdb_id}",
-      "tv_url": "https://vixsrc.to/tv/{tmdb_id}/{season}/{episode}",
-      "headers": {
-        "Referer": "https://vixsrc.to/",
-        "Origin": "https://vixsrc.to"
-      },
-      "mirrors": [
-        "https://vixcloud.co/movie/{tmdb_id}"
-      ]
+      "badge": "1080p",
+      "type": "embed_extract",
+      "movie_url": "https://vidsrc.sh/embed/movie/{tmdb_id}",
+      "tv_url": "https://vidsrc.sh/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://vidsrc.sh/" },
+      "notes": "النطاق الرئيسي الجديد لـ VidSrc، ويُعد الخيار الأول والموثوق."
     },
     {
       "id": "vidlink_pro",
@@ -67,51 +53,151 @@
       "type": "embed_extract",
       "movie_url": "https://vidlink.pro/movie/{tmdb_id}",
       "tv_url": "https://vidlink.pro/tv/{tmdb_id}/{season}/{episode}",
-      "headers": {
-        "Referer": "https://vidlink.pro/"
-      }
+      "headers": { "Referer": "https://vidlink.pro/" },
+      "notes": "حالته Online وواجهته البرمجية تعمل كما هو متوقع."
     },
     {
-      "id": "multiembed_mirror",
+      "id": "vidsrc_net",
+      "name": "VidSrc.net",
+      "categories": ["Hollywood", "TV Shows"],
+      "enabled": true,
+      "priority": 3,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://vidsrc.net/embed/movie?tmdb={tmdb_id}",
+      "tv_url": "https://vidsrc.net/embed/tv?tmdb={tmdb_id}&season={season}&episode={episode}",
+      "headers": { "Referer": "https://vidsrc.net/" },
+      "notes": "مستقر بشكل أساسي للمسلسلات والمصادر الأخرى."
+    },
+    {
+      "id": "multiembed_mov",
       "name": "MultiEmbed Server",
       "categories": ["Hollywood", "Anime", "TV Shows"],
       "enabled": true,
-      "priority": 3,
+      "priority": 4,
       "badge": "1080p",
       "type": "embed_extract",
       "movie_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1",
       "tv_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1&s={season}&e={episode}",
-      "headers": {
-        "Referer": "https://multiembed.mov/"
-      }
+      "headers": { "Referer": "https://multiembed.mov/" },
+      "notes": "لا يزال مدرجًا كخادم يعمل في أدوات متعددة."
     },
     {
-      "id": "autoembed_cdn",
-      "name": "AutoEmbed Global",
-      "categories": ["Hollywood", "TV Shows"],
-      "enabled": true,
-      "priority": 4,
-      "badge": "HD",
-      "type": "embed_extract",
-      "movie_url": "https://autoembed.to/movie/tmdb/{tmdb_id}",
-      "tv_url": "https://autoembed.to/tv/tmdb/{tmdb_id}/{season}/{episode}",
-      "headers": {
-        "Referer": "https://autoembed.to/"
-      }
-    },
-    {
-      "id": "consumet_api",
-      "name": "Abyssinia Consumet",
-      "categories": ["Hollywood", "Anime"],
+      "id": "vidfast_pro",
+      "name": "VidFast",
+      "categories": ["Movies", "TV Shows"],
       "enabled": true,
       "priority": 5,
       "badge": "HD",
-      "type": "json_api",
-      "movie_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}",
-      "tv_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}?season={season}&episode={episode}",
-      "headers": {
-        "Accept": "application/json"
-      }
+      "type": "embed_extract",
+      "movie_url": "https://vidfast.pro/movie/{tmdb_id}",
+      "tv_url": "https://vidfast.pro/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://vidfast.pro/" },
+      "notes": "يُصنف ضمن المزودين الأساسيين (Core) في مكتبة tmdb-embed-providers."
+    },
+    {
+      "id": "vidsrc_pm",
+      "name": "VidSrc.pm",
+      "categories": ["Movies", "TV Shows"],
+      "enabled": true,
+      "priority": 6,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://vidsrc.pm/embed/movie/{tmdb_id}",
+      "tv_url": "https://vidsrc.pm/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://vidsrc.pm/" },
+      "notes": "أحد المزودين الأساسيين السبعة في قائمة tmdb-embed-providers."
+    },
+    {
+      "id": "2embed_skin",
+      "name": "2Embed (skin)",
+      "categories": ["Movies", "TV Shows"],
+      "enabled": true,
+      "priority": 7,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://2embed.skin/embed/tmdb/movie?id={tmdb_id}",
+      "tv_url": "https://2embed.skin/embed/tmdb/tv?id={tmdb_id}&s={season}&e={episode}",
+      "headers": { "Referer": "https://2embed.skin/" },
+      "notes": "نطاق بديل لـ 2Embed، مدرج ضمن الفئة الأساسية."
+    },
+    {
+      "id": "vidsrc_icu",
+      "name": "VidSrc.icu",
+      "categories": ["Movies", "TV Shows", "Anime"],
+      "enabled": true,
+      "priority": 8,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://vidsrc.icu/embed/movie/{tmdb_id}",
+      "tv_url": "https://vidsrc.icu/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://vidsrc.icu/" },
+      "notes": "مذكور ضمن المزودين الذين تدعمهم مكتبات التضمين."
+    },
+    {
+      "id": "embedsu",
+      "name": "Embed.su",
+      "categories": ["Movies", "TV Shows"],
+      "enabled": true,
+      "priority": 9,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://embed.su/embed/movie/{tmdb_id}",
+      "tv_url": "https://embed.su/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://embed.su/" },
+      "notes": "مدعوم في مكتبة vidsrc-bypass."
+    },
+    {
+      "id": "autoembed_co",
+      "name": "AutoEmbed",
+      "categories": ["Hollywood", "TV Shows"],
+      "enabled": true,
+      "priority": 10,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://autoembed.co/movie/tmdb/{tmdb_id}",
+      "tv_url": "https://autoembed.co/tv/tmdb/{tmdb_id}-{season}-{episode}",
+      "headers": { "Referer": "https://autoembed.co/" },
+      "notes": "يدعم TMDB و IMDb، مدرج ضمن الفئة الإضافية (Extras)."
+    },
+    {
+      "id": "moviesapi_to",
+      "name": "MoviesAPI.to",
+      "categories": ["Movies", "TV Shows", "Anime"],
+      "enabled": true,
+      "priority": 11,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://moviesapi.to/embed/movie/{tmdb_id}",
+      "tv_url": "https://moviesapi.to/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://moviesapi.to/" },
+      "notes": "أحد المزودين الإضافيين الخمسة في قائمة tmdb-embed-providers."
+    },
+    {
+      "id": "smashystream",
+      "name": "SmashyStream",
+      "categories": ["Movies", "TV Shows", "Asian Content"],
+      "enabled": true,
+      "priority": 12,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://smashystream.com/embed/movie/{tmdb_id}",
+      "tv_url": "https://smashystream.com/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://smashystream.com/" },
+      "notes": "يدعم المحتوى الآسيوي والترجمات متعددة اللغات."
+    },
+    {
+      "id": "nontongo",
+      "name": "Nontongo",
+      "categories": ["Asian Drama", "TV Shows"],
+      "enabled": false,
+      "priority": 13,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://nontongo.win/embed/movie/{tmdb_id}",
+      "tv_url": "https://nontongo.win/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": { "Referer": "https://nontongo.win/" },
+      "notes": "متخصص في الدراما الكورية/الصينية/اليابانية، لكنه ضمن الفئة الإضافية المتغيرة."
     }
   ]
 }
