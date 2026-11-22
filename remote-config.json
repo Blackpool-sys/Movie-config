@@ -9,7 +9,7 @@
   "app_update": {
     "latest_version": "4.4.1",
     "latest_build": 13,
-    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.4.0/app-prod-release4.4.0.apk",
+    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.4.0/app-prod-release4.4.1.apk",
     "changelog": {
       "ar": "• حساب حجم الفيديو الفعلي ونسبة وسرعة التحميل بدقة\n• ظهور التحميلات الجارية مباشرة في شاشة التحميلات مع أزرار التحكم الكامل\n• دعم إيقاف التحميل واستئنافه لاحقاً أو إلغائه مع استمرار التحميل في الخلفية عند الخروج من التطبيق\n• التحكم السحابي الكامل بإعلان ما قبل التشغيل (تفعيله/تعطيله، النص، الرابط، ومدة العداد)\n• استقرار عالي وتحديث رقم الإصدار إلى 4.4.0",
       "en": "• Real file size calculation, progress percentage, and live download speed\n• Active downloads section with interactive Pause, Resume, and Cancel controls\n• Background downloading when exiting the app with resume persistence\n• Remote pre-roll ad configuration (enable/disable, texts, link, and countdown duration)\n• Upgraded app version to 4.4.0 with high stability"
