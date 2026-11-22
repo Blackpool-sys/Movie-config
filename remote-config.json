@@ -1,50 +1,84 @@
 {
-  "version": "1.0.0",
-  "updated_at": "2026-11-20T00:00:00Z",
+  "version": "1.1.0",
+  "updated_at": "2026-11-22T20:00:00Z",
   "settings": {
-    "timeout_seconds": 12,
+    "timeout_seconds": 8,
     "max_concurrent_checks": 3,
-    "fallback_user_agent": "Mozilla/5.0 (Linux; Android 13; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+    "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   },
   "providers": [
     {
-      "id": "vixsrc_direct",
-      "name": "VixSrc Direct",
-      "categories": ["Hollywood", "TV Shows"],
+      "id": "vixsrc_mirror",
+      "name": "VixSrc High-Speed CDN",
+      "categories": ["Hollywood", "TV Shows", "Trending"],
       "enabled": true,
       "priority": 1,
-      "type": "direct_hls",
+      "badge": "1080p/720p",
+      "type": "vixsrc_extract",
       "movie_url": "https://vixsrc.to/movie/{tmdb_id}",
       "tv_url": "https://vixsrc.to/tv/{tmdb_id}/{season}/{episode}",
       "headers": {
         "Referer": "https://vixsrc.to/",
         "Origin": "https://vixsrc.to"
-      }
+      },
+      "mirrors": [
+        "https://vixcloud.co/movie/{tmdb_id}"
+      ]
     },
     {
-      "id": "consumet_api",
-      "name": "Abyssinia",
-      "categories": ["Hollywood", "Anime"],
+      "id": "vidlink_pro",
+      "name": "VidLink Cloud",
+      "categories": ["Movies", "Series", "4K"],
       "enabled": true,
       "priority": 2,
-      "type": "json_api",
-      "movie_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}",
-      "tv_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}?season={season}&episode={episode}",
+      "badge": "4K/1080p",
+      "type": "embed_extract",
+      "movie_url": "https://vidlink.pro/movie/{tmdb_id}",
+      "tv_url": "https://vidlink.pro/tv/{tmdb_id}/{season}/{episode}",
       "headers": {
-        "Accept": "application/json"
+        "Referer": "https://vidlink.pro/"
       }
     },
     {
       "id": "multiembed_mirror",
-      "name": "Zeila",
-      "categories": ["Hollywood", "TV Shows"],
+      "name": "MultiEmbed Server",
+      "categories": ["Hollywood", "Anime", "TV Shows"],
       "enabled": true,
       "priority": 3,
+      "badge": "1080p",
       "type": "embed_extract",
       "movie_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1",
       "tv_url": "https://multiembed.mov/?video_id={tmdb_id}&tmdb=1&s={season}&e={episode}",
       "headers": {
         "Referer": "https://multiembed.mov/"
+      }
+    },
+    {
+      "id": "autoembed_cdn",
+      "name": "AutoEmbed Global",
+      "categories": ["Hollywood", "TV Shows"],
+      "enabled": true,
+      "priority": 4,
+      "badge": "HD",
+      "type": "embed_extract",
+      "movie_url": "https://autoembed.to/movie/tmdb/{tmdb_id}",
+      "tv_url": "https://autoembed.to/tv/tmdb/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://autoembed.to/"
+      }
+    },
+    {
+      "id": "consumet_api",
+      "name": "Abyssinia Consumet",
+      "categories": ["Hollywood", "Anime"],
+      "enabled": true,
+      "priority": 5,
+      "badge": "HD",
+      "type": "json_api",
+      "movie_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}",
+      "tv_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}?season={season}&episode={episode}",
+      "headers": {
+        "Accept": "application/json"
       }
     }
   ]
