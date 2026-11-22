@@ -7,9 +7,9 @@
     "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   },
   "app_update": {
-    "latest_version": "1.2.0",
-    "latest_build": 2,
-    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v1.3.0/app-prod-release.apk",
+    "latest_version": "1.3.0",
+    "latest_build": 3,
+    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v1.2.0/app-prod-release.apk",
     "changelog": {
       "ar": "• إصلاح زر تشغيل الحلقات S1:E1 وتشغيلها مباشرة دون توقف\n• إضافة أزرار التحكم بالتنزيلات (إيقاف مؤقت واستئناف وإلغاء)\n• نافذة انضمام رسمية إلى قناة التليجرام\n• مساحة إعلان ذكية قبل التشغيل مع عداد 10 ثوانٍ لتخطي الإعلان\n• مساواة حجم زر التحميل مع زر التشغيل لتحسين التجربة",
       "en": "• Fixed S1:E1 episode play button for direct playback\n• Download controls: Pause, Resume, and Cancel\n• Official Telegram channel subscription prompt\n• 10-second smart ad countdown overlay before playback\n• Symmetrical Play and Download button sizing"
