@@ -41,7 +41,7 @@
   "providers": [
     {
       "id": "vixsrc_mirror",
-      "name": "VixSrc High-Speed CDN",
+      "name": "VixSrc High-Speed",
       "categories": ["Hollywood", "TV Shows", "Trending"],
       "enabled": true,
       "priority": 1,
