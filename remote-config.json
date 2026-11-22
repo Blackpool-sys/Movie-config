@@ -7,7 +7,7 @@
     "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   },
   "app_update": {
-    "latest_version": "4.4.0",
+    "latest_version": "4.4.1",
     "latest_build": 13,
     "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.4.0/app-prod-release4.4.0.apk",
     "changelog": {
