@@ -1,5 +1,5 @@
 {
-  "version": "4.6.0",
+  "version": "4.6.1",
   "updated_at": "2026-11-23T12:00:00Z",
   "settings": {
     "timeout_seconds": 8,
@@ -7,8 +7,8 @@
     "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   },
   "app_update": {
-    "latest_version": "4.6.0",
-    "latest_build": 15,
+    "latest_version": "4.6.1",
+    "latest_build": 16,
     "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.6.0/app-prod-release.apk",
     "changelog": {
       "ar": "• تخصيص تجربة التحميل: نافذة مخصصة لاختيار سيرفر التحميل، ثم جودة ولغة الفيديو، ولغة الترجمة قبل بدء التحميل\n• تحديث التطبيق الذاتي من داخل التطبيق: تحميل مباشر مع مؤشر النسبة وحجم الملف، وتثبيت التحديث تلقائياً دون التوجيه لمتصفح خارجي\n• مشغل ملء الشاشة الفوري مع وضع الاستمرار المضمن: فتح مباشر في وضع ملء الشاشة، وعند الخروج يستمر الفيديو في العمل بأعلى الصفحة مع أزرار التحكم (السيرفر، الترجمة، والتحميل) وقائمة المشابهة أسفله\n• تفعيل ميزة متابعة المشاهدة (Resume / Continue Watching): زر استئناف بارز مع شريط تقدم رفيع يوضح الوقت المتبقي لإنهاء الفيلم بدقة",
