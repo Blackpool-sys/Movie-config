@@ -17,23 +17,24 @@
   },
   "pre_roll_ad": {
     "enabled": true,
+    "network": "adsterra",
     "countdown_seconds": 10,
     "badge": {
-      "ar": "إعلان دعائي",
-      "en": "Sponsored Ad"
+      "ar": "إعلان دعائي - Adsterra",
+      "en": "Adsterra Sponsored"
     },
     "title": {
-      "ar": "عضوية VIP - KnoxForTV",
-      "en": "KnoxForTV - VIP Club"
+      "ar": "عرض حصري مميز - Adsterra",
+      "en": "Special Offer - Adsterra"
     },
     "description": {
-      "ar": "استمتع بمشاهدة مكتبة ضخمة تضم آلاف الأفلام والمسلسلات الحصرية بأعلى دقة 4K ودون إعلانات.",
-      "en": "Experience ultra buffer-free 4K streaming with zero interruptions and exclusive titles."
+      "ar": "شاهد أفضل العروض والمحتوى الحصري بأعلى سرعة وجودة. اضغط على الزر أدناه للاستفادة من العرض.",
+      "en": "Discover high quality offers and premium entertainment. Click below to explore."
     },
-    "action_url": "https://t.me/KNOXFORTV",
+    "action_url": "https://beta.publishers.adsterra.com",
     "action_text": {
-      "ar": "انضم الآن إلى القناة",
-      "en": "Join Channel Now"
+      "ar": "مشاهدة العرض الآن",
+      "en": "View Offer Now"
     },
     "image_url": "",
     "icon": "crown"
