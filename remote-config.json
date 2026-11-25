@@ -1,45 +1,44 @@
 {
-  "version": "4.6.1",
-  "updated_at": "2026-11-25T13:00:00Z",
+  "version": "4.6.0",
+  "updated_at": "2026-11-25T14:00:00Z",
   "settings": {
     "timeout_seconds": 8,
     "max_concurrent_checks": 3,
     "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
   },
   "app_update": {
-    "latest_version": "4.6.1",
+    "latest_version": "4.6.0",
     "latest_build": 15,
     "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.6.0/app-prod-release.apk",
     "changelog": {
-      "ar": "• تخصيص تجربة التحميل: نافذة مخصصة لاختيار سيرفر التحميل، ثم جودة ولغة الفيديو، ولغة الترجمة قبل بدء التحميل\n• تحديث التطبيق الذاتي من داخل التطبيق: تحميل مباشر مع مؤشر النسبة وحجم الملف، وتثبيت التحديث تلقائياً دون التوجيه لمتصفح خارجي\n• مشغل ملء الشاشة الفوري مع وضع الاستمرار المضمن: فتح مباشر في وضع ملء الشاشة، وعند الخروج يستمر الفيديو في العمل بأعلى الصفحة مع أزرار التحكم (السيرفر، الترجمة، والتحميل) وقائمة المشابهة أسفله\n• تفعيل ميزة متابعة المشاهدة (Resume / Continue Watching): زر استئناف بارز مع شريط تقدم رفيع يوضح الوقت المتبقي لإنهاء الفيلم بدقة",
-      "en": "• Customized download workflow: Pick download server, quality/audio language, and subtitle language before starting download\n• In-app self update & auto-install: Direct APK download with live progress and automatic native package installation\n• Fullscreen-first player with inline persistence: Launches directly into fullscreen; on exiting, video continues playing in header with Server, Subtitles, and Download chips\n• Continue Watching / Resume feature: Prominent Resume button with sleek progress bar showing remaining time"
+      "ar": "• تخصيص تجربة التحميل: نافذة مخصصة لاختيار سيرفر التحميل، ثم جودة ولغة الفيديو، ولغة الترجمة قبل بدء التحميل\n• تحديث التطبيق الذاتي من داخل التطبيق: تحميل مباشر مع مؤشر النسبة وحجم الملف، وتثبيت التحديث تلقائياً دون التوجيه لمتصفح خارجي\n• مشغل ملء الشاشة الفوري مع وضع الاستمرار المضمن: فتح مباشر في وضع ملء الشاشة، وعند الخروج يستمر الفيديو في العمل بأعلى الصفحة مع أزرار التحكم (السيرفر، الترجمة، والتحميل) وقائمة المشابهة أسفله\n• الانتقال التلقائي السلس للحلقة التالية بنفس السيرفر والجودة والترجمة وإصلاح إحصائيات المشاهدة لجميع الأقسام والأنمي",
+      "en": "• Customized download workflow: Pick download server, quality/audio language, and subtitle language before starting download\n• In-app self update & auto-install: Direct APK download with live progress and automatic native package installation\n• Fullscreen-first player with inline persistence: Launches directly into fullscreen; on exiting, video continues playing in header with Server, Subtitles, and Download chips\n• Seamless Next Episode switching keeping active provider, quality & subtitles, plus unified Viewing Insights tracking including Anime"
     }
   },
   "pre_roll_ad": {
     "enabled": true,
     "display_mode": "webview",
-    "network": "adsterra",
     "countdown_seconds": 5,
     "badge": {
-      "ar": "إعلان دعائي - Adsterra",
-      "en": "Adsterra Sponsored"
+      "ar": "إعلان دعائي",
+      "en": "Sponsored"
     },
     "title": {
       "ar": "شاهد الإعلان للمتابعة",
       "en": "Watch Ad to Continue"
     },
     "description": {
-      "ar": "شاهد الإعلان لفتح تشغيل الفيديو.",
-      "en": "Watch the advertisement to unlock playback."
+      "ar": "يستغرق الأمر بضع ثوانٍ لدعم استمرار البث المجاني.",
+      "en": "Please wait a few seconds before playback begins."
+    },
+    "action_url": "https://beta.publishers.adsterra.com",
+    "action_text": {
+      "ar": "عرض التفاصيل",
+      "en": "Learn More"
     },
     "close_text": {
-      "ar": "إغلاق الإعلان",
-      "en": "Close Ad"
-    },
-    "action_url": "https://asiafilm.org/4/2c700bf2358de43f0219967e8c8593b8",
-    "action_text": {
-      "ar": "اكتشف العرض الآن",
-      "en": "Explore Offer"
+      "ar": "إغلاق الإعلان ومتابعة المشاهدة",
+      "en": "Close Ad & Continue Watching"
     },
     "image_url": "",
     "icon": "crown"
@@ -48,11 +47,9 @@
     {
       "id": "vixsrc_mirror",
       "name": "VixSrc High-Speed CDN",
-      "categories": [
-        "Hollywood",
-        "TV Shows",
-        "Trending"
-      ],
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
       "enabled": true,
       "priority": 1,
       "badge": "1080p/720p",
@@ -68,30 +65,11 @@
       ]
     },
     {
-      "id": "hianime",
-      "name": "HiAnime Cloud (Anime Engine)",
-      "categories": [
-        "Anime",
-        "Japanese Animation",
-        "Series",
-        "Movies"
-      ],
-      "enabled": true,
-      "priority": 2,
-      "badge": "Anime 1080p",
-      "type": "anime_extract",
-      "headers": {
-        "Referer": "https://hianime.at/"
-      }
-    },
-    {
       "id": "vidlink_pro",
       "name": "VidLink Cloud",
-      "categories": [
-        "Movies",
-        "Series",
-        "4K"
-      ],
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows", "4K"],
+      "is_free": true,
       "enabled": true,
       "priority": 2,
       "badge": "4K/1080p",
@@ -105,11 +83,9 @@
     {
       "id": "multiembed_mirror",
       "name": "MultiEmbed Server",
-      "categories": [
-        "Hollywood",
-        "Anime",
-        "TV Shows"
-      ],
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
       "enabled": true,
       "priority": 3,
       "badge": "1080p",
@@ -123,10 +99,9 @@
     {
       "id": "autoembed_cdn",
       "name": "AutoEmbed Global",
-      "categories": [
-        "Hollywood",
-        "TV Shows"
-      ],
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
       "enabled": true,
       "priority": 4,
       "badge": "HD",
@@ -138,15 +113,28 @@
       }
     },
     {
-      "id": "consumet_api",
-      "name": "Abyssinia Consumet",
-      "categories": [
-        "Hollywood",
-        "Anime"
-      ],
+      "id": "hianime",
+      "name": "HiAnime Cloud (Anime Engine)",
+      "scope": "anime",
+      "categories": ["Anime", "Japanese Animation"],
+      "is_free": true,
       "enabled": true,
-      "priority": 5,
-      "badge": "HD",
+      "priority": 1,
+      "badge": "Anime 1080p",
+      "type": "anime_extract",
+      "headers": {
+        "Referer": "https://hianime.at/"
+      }
+    },
+    {
+      "id": "consumet_anime",
+      "name": "Abyssinia Anime Cloud",
+      "scope": "anime",
+      "categories": ["Anime"],
+      "is_free": true,
+      "enabled": true,
+      "priority": 2,
+      "badge": "Anime HD",
       "type": "json_api",
       "movie_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}",
       "tv_url": "https://api.consumet.org/meta/tmdb/watch/{tmdb_id}?season={season}&episode={episode}",
