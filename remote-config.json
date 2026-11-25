@@ -9,7 +9,7 @@
   "app_update": {
     "latest_version": "4.6.1",
     "latest_build": 15,
-    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.6.0/app-prod-release.apk",
+    "download_url": "https://github.com/Blackpool-sys/Movie-config/releases/download/v4.6.0/app-prod-debug.apk",
     "changelog": {
       "ar": "• أولوية التشغيل المدمجة: VixSrc للأفلام والمسلسلات و HiAnime للأنمي مع الانتقال التلقائي لسيرفرات GitHub الاحتياطية عند الحاجة وفصل تام بين القسمين\n• إصلاح فتح المشغل مباشرة بعد إغلاق إعلان Adsterra وإضافة بوابة إعلان 10 ثوانٍ لزر التحميل\n• إصلاح الصفحة البيضاء في بوابة الدفع وضمان ظهور عنوان المحفظة ورمز QR، مع خفض الحد الأدنى للشحن إلى 1 دولار واشتراك Plus إلى 0.99 دولار\n• إشعارات تلقائية عند صدور أفلام ومسلسلات وأنمي جديدة، وإشعار عشوائي مقترح كل ساعتين",
       "en": "• Built-in priority engines: VixSrc first for Movies & Series and HiAnime first for Anime, with strict category isolation and automatic GitHub fallback servers\n• Fixed player launch right after closing Adsterra pre-roll ad and added a 10s ad gate to Downloads\n• Fixed payment white screen so wallet address & QR code render reliably, lowered top-up minimum to $1.00 USD and Plus plan to $0.99 USD\n• Push notifications for new Movie, Series & Anime releases plus randomized picks every 2 hours"
