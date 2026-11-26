@@ -50,7 +50,7 @@
       "description": "High-Speed HLS Streaming Engine (Movies & Series)",
       "scope": "movies_tv",
       "categories": ["Movies", "TV Shows"],
-      "is_free": true,
+      "is_free": false,
       "enabled": false,
       "priority": 1,
       "badge": "1080p/720p",
