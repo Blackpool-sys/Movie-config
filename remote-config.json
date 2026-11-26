@@ -143,31 +143,7 @@
         "Origin": "https://vidsrc.cc"
       }
     },
-    {
-      "id": "hianime",
-      "name": "HiAnime dgdag",
-      "description": "Ultra Fast Dedicated Anime HLS Engine (Sub & Dub)",
-      "scope": "anime",
-      "categories": ["Anime", "Japanese Animation"],
-      "is_free": true,
-      "enabled": false,
-      "priority": 2,
-      "badge": "Anime 1080p",
-      "type": "anime_extract",
-      "id_type": "tmdb",
-      "movie_url": "https://hianime.sx/search?keyword={title}",
-      "tv_url": "https://hianime.sx/search?keyword={title}",
-      "headers": {
-        "Referer": "https://hianime.sx/",
-        "Origin": "https://hianime.sx"
-      },
-      "mirrors": [
-        "https://hianime.sx",
-        "https://hianime.do",
-        "https://hianime.to",
-        "https://kaido.to"
-      ]
-    },
+
     {
       "id": "miruro_anime",
       "name": "Miruro Anime Cloud",
