@@ -51,7 +51,7 @@
       "scope": "movies_tv",
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
-      "enabled": true,
+      "enabled": false,
       "priority": 1,
       "badge": "1080p/720p",
       "type": "vixsrc_extract",
