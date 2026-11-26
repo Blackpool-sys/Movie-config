@@ -1,10 +1,10 @@
 {
-  "version": "4.6.0",
-  "updated_at": "2026-11-25T19:00:00Z",
+  "version": "4.6.1",
+  "updated_at": "2026-11-26T19:15:00Z",
   "settings": {
-    "timeout_seconds": 8,
-    "max_concurrent_checks": 3,
-    "fallback_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    "timeout_seconds": 15,
+    "max_concurrent_checks": 2,
+    "fallback_user_agent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
   },
   "app_update": {
     "latest_version": "4.6.0",
@@ -45,6 +45,26 @@
   },
   "providers": [
     {
+      "id": "vixsrc_to",
+      "name": "VixSrc Server",
+      "description": "Primary Movies & Series Server (Remote Override)",
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
+      "enabled": true,
+      "priority": 1,
+      "badge": "1080p",
+      "type": "embed_extract",
+      "video_format": "hls",
+      "use_cache": false,
+      "movie_url": "https://vixsrc.to/movie/{tmdb_id}",
+      "tv_url": "https://vixsrc.to/tv/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://vixsrc.to/",
+        "Origin": "https://vixsrc.to"
+      }
+    },
+    {
       "id": "vidlink_pro",
       "name": "VidLink Pro",
       "description": "4K / 1080p Movies & Series Fallback Server",
@@ -52,14 +72,36 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 1,
+      "priority": 2,
       "badge": "4K/1080p",
       "type": "embed_extract",
+      "video_format": "hls",
+      "use_cache": false,
       "movie_url": "https://vidlink.pro/movie/{tmdb_id}",
       "tv_url": "https://vidlink.pro/tv/{tmdb_id}/{season}/{episode}",
       "headers": {
         "Referer": "https://vidlink.pro/",
         "Origin": "https://vidlink.pro"
+      }
+    },
+    {
+      "id": "vidsrc_cc",
+      "name": "VidSrc CC",
+      "description": "High-Speed Movies & Series Mirror",
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
+      "enabled": true,
+      "priority": 3,
+      "badge": "1080p",
+      "type": "embed_extract",
+      "video_format": "hls",
+      "use_cache": false,
+      "movie_url": "https://vidsrc.cc/v2/embed/movie/{tmdb_id}",
+      "tv_url": "https://vidsrc.cc/v2/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://vidsrc.cc/",
+        "Origin": "https://vidsrc.cc"
       }
     },
     {
@@ -70,9 +112,11 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 2,
+      "priority": 4,
       "badge": "1080p",
       "type": "embed_extract",
+      "video_format": "hls",
+      "use_cache": false,
       "movie_url": "https://www.2embed.cc/embed/{tmdb_id}",
       "tv_url": "https://www.2embed.cc/embedtv/{tmdb_id}&s={season}&e={episode}",
       "headers": {
@@ -88,18 +132,18 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 3,
+      "priority": 5,
       "badge": "HD",
       "type": "embed_extract",
+      "video_format": "hls",
+      "use_cache": false,
       "movie_url": "https://vidsrc.to/embed/movie/{tmdb_id}",
       "tv_url": "https://vidsrc.to/embed/tv/{tmdb_id}/{season}/{episode}",
       "headers": {
         "Referer": "https://vidsrc.to/",
         "Origin": "https://vidsrc.to"
       },
-      "mirrors": [
-        "https://vidsrc.cc/v2/embed/movie/{tmdb_id}"
-      ]
+      "mirrors": []
     },
     {
       "id": "miruro_anime",
@@ -112,8 +156,11 @@
       "priority": 1,
       "badge": "Anime 1080p",
       "type": "embed_extract",
-      "movie_url": "https://www.miruro.tv/watch?id={tmdb_id}",
-      "tv_url": "https://www.miruro.tv/watch?id={tmdb_id}&ep={episode}",
+      "id_type": "anilist",
+      "video_format": "hls",
+      "use_cache": false,
+      "movie_url": "https://www.miruro.tv/watch?id={anilist_id}",
+      "tv_url": "https://www.miruro.tv/watch?id={anilist_id}&ep={episode}",
       "headers": {
         "Referer": "https://www.miruro.tv/",
         "Origin": "https://www.miruro.tv"
