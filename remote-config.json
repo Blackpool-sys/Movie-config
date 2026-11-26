@@ -151,7 +151,7 @@
       "scope": "anime",
       "categories": ["Anime", "Japanese Animation"],
       "is_free": true,
-      "enabled": false,
+      "enabled": true,
       "priority": 1,
       "badge": "Anime 1080p",
       "type": "embed_extract",
