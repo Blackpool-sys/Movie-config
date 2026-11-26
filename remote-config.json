@@ -1,9 +1,9 @@
 {
-  "version": "4.7.0",
-  "updated_at": "2026-11-26T13:00:00Z",
+  "version": "4.7.1",
+  "updated_at": "2026-11-26T21:30:00Z",
   "settings": {
     "timeout_seconds": 15,
-    "max_concurrent_checks": 3,
+    "max_concurrent_checks": 2,
     "fallback_user_agent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36"
   },
   "app_update": {
@@ -52,7 +52,7 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 2,
+      "priority": 1,
       "badge": "1080p/720p",
       "type": "vixsrc_extract",
       "id_type": "tmdb",
@@ -60,8 +60,7 @@
       "tv_url": "https://vixsrc.to/tv/{tmdb_id}/{season}/{episode}",
       "headers": {
         "Referer": "https://vixsrc.to/",
-        "Origin": "https://vixsrc.to",
-        "Accept": "application/json"
+        "Origin": "https://vixsrc.to"
       },
       "mirrors": [
         "https://vixsrc.to"
@@ -75,7 +74,7 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 1,
+      "priority": 2,
       "badge": "4K/1080p",
       "type": "embed_extract",
       "id_type": "tmdb",
@@ -87,6 +86,44 @@
       }
     },
     {
+      "id": "bingeapi",
+      "name": "BingeAPI Cloud",
+      "description": "Ad-Free Multi-Server 4K Movies & Series Backup",
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
+      "enabled": true,
+      "priority": 3,
+      "badge": "4K",
+      "type": "embed_extract",
+      "id_type": "tmdb",
+      "movie_url": "https://bingeapi.st/embed/movie/{tmdb_id}",
+      "tv_url": "https://bingeapi.st/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://bingeapi.st/",
+        "Origin": "https://bingeapi.st"
+      }
+    },
+    {
+      "id": "vidsrc_cc",
+      "name": "VidSrc CC",
+      "description": "Multi-Source Movies & Series Fallback Mirror",
+      "scope": "movies_tv",
+      "categories": ["Movies", "TV Shows"],
+      "is_free": true,
+      "enabled": true,
+      "priority": 4,
+      "badge": "1080p",
+      "type": "embed_extract",
+      "id_type": "tmdb",
+      "movie_url": "https://vidsrc.cc/v2/embed/movie/{tmdb_id}",
+      "tv_url": "https://vidsrc.cc/v2/embed/tv/{tmdb_id}/{season}/{episode}",
+      "headers": {
+        "Referer": "https://vidsrc.cc/",
+        "Origin": "https://vidsrc.cc"
+      }
+    },
+    {
       "id": "2embed_cc",
       "name": "2Embed Server",
       "description": "Fast Movies & Series Backup Server",
@@ -94,7 +131,7 @@
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
       "enabled": true,
-      "priority": 3,
+      "priority": 5,
       "badge": "1080p",
       "type": "embed_extract",
       "id_type": "tmdb",
@@ -108,12 +145,12 @@
     {
       "id": "vidsrc_to",
       "name": "VidSrc Mirror",
-      "description": "Multi-Source Movies & Series Mirror",
+      "description": "Multi-Source Movies & Series Mirror (Backup)",
       "scope": "movies_tv",
       "categories": ["Movies", "TV Shows"],
       "is_free": true,
-      "enabled": true,
-      "priority": 4,
+      "enabled": false,
+      "priority": 6,
       "badge": "HD",
       "type": "embed_extract",
       "id_type": "tmdb",
@@ -125,33 +162,14 @@
       }
     },
     {
-      "id": "vidsrc_cc",
-      "name": "VidSrc CC",
-      "description": "Multi-Source Movies & Series Fallback Mirror",
-      "scope": "movies_tv",
-      "categories": ["Movies", "TV Shows"],
-      "is_free": true,
-      "enabled": true,
-      "priority": 5,
-      "badge": "HD",
-      "type": "embed_extract",
-      "id_type": "tmdb",
-      "movie_url": "https://vidsrc.cc/v2/embed/movie/{tmdb_id}",
-      "tv_url": "https://vidsrc.cc/v2/embed/tv/{tmdb_id}/{season}/{episode}",
-      "headers": {
-        "Referer": "https://vidsrc.cc/",
-        "Origin": "https://vidsrc.cc"
-      }
-    },
-    {
       "id": "hianime",
-      "name": "HiAnime dgdag",
+      "name": "HiAnime Cloud",
       "description": "Ultra Fast Dedicated Anime HLS Engine (Sub & Dub)",
       "scope": "anime",
       "categories": ["Anime", "Japanese Animation"],
       "is_free": true,
       "enabled": true,
-      "priority": 2,
+      "priority": 1,
       "badge": "Anime 1080p",
       "type": "anime_extract",
       "id_type": "tmdb",
@@ -171,17 +189,17 @@
     {
       "id": "miruro_anime",
       "name": "Miruro Anime Cloud",
-      "description": "Dedicated Anime Fallback Server (Sub & Dub)",
+      "description": "Dedicated Anime Fallback Server (Requires AniList ID)",
       "scope": "anime",
       "categories": ["Anime", "Japanese Animation"],
       "is_free": true,
-      "enabled": true,
-      "priority": 1,
+      "enabled": false,
+      "priority": 2,
       "badge": "Anime 1080p",
       "type": "embed_extract",
-      "id_type": "tmdb",
-      "movie_url": "https://www.miruro.tv/watch?id={tmdb_id}",
-      "tv_url": "https://www.miruro.tv/watch?id={tmdb_id}&ep={episode}",
+      "id_type": "anilist",
+      "movie_url": "https://www.miruro.tv/watch?id={anilist_id}",
+      "tv_url": "https://www.miruro.tv/watch?id={anilist_id}&ep={episode}",
       "headers": {
         "Referer": "https://www.miruro.tv/",
         "Origin": "https://www.miruro.tv"
